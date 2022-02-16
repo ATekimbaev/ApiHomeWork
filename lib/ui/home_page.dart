@@ -20,8 +20,9 @@ class MyHomePage extends StatelessWidget {
         child: BlocBuilder(
           bloc: apiBloc,
           builder: (context, state) {
+            getUser();
             if (state is ApiGetUser) {
-              getUser();
+              
               return Column(
                 children: [
                   CircleAvatar(
